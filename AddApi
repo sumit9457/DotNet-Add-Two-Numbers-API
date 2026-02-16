@@ -1,0 +1,16 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace AddApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AddController : ControllerBase
+    {
+        [HttpGet]
+        public IActionResult Add(int a, int b)
+        {
+            int result = a + b;
+            return Ok(new { result = result });
+        }
+    }
+}
